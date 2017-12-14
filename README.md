@@ -1,1 +1,1 @@
-This is a Watermark TextBox and PasswordBox example project
+ TextBox and PasswordBox with  Watermark example project
