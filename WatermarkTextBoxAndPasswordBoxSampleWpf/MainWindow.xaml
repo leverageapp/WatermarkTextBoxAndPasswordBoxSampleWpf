@@ -1,0 +1,28 @@
+﻿<Window x:Class="WatermarkTextBoxAndPasswordBoxSampleWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WatermarkTextBoxAndPasswordBoxSampleWpf"
+        xmlns:helper="clr-namespace:WatermarkTextBoxAndPasswordBoxSampleWpf.Helpers"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="220" Width="300">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Views/DictionaryWatermark.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>        
+            <TextBox Margin="10"
+                Template="{StaticResource WatermarkTextBox}"
+                helper:TextBoxHelper.Watermark="Username or email"/>
+        <PasswordBox Margin="10"
+                Template="{StaticResource WatermarkPasswordBox}"
+                helper:PasswordBoxHelper.Watermark="Password"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
